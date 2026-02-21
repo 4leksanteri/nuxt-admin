@@ -21,7 +21,6 @@
 ## Requirements
 
 - Nuxt `>= 4.3.1`
-- `@nuxt/ui` `>= 4.4.0`
 
 ---
 
