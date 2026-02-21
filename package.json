@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-admin",
+  "name": "@alekorhonen/nuxt-admin",
   "version": "0.0.1",
   "description": "A Nuxt module for admin interface",
   "repository": "4leksanteri/nuxt-admin",

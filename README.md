@@ -28,13 +28,16 @@
 ## Installation
 
 ```bash
-npm install nuxt-admin @nuxt/ui
+npm install @alekorhonen/nuxt-admin
+```
+
+Then add the module to `nuxt.config.ts`:
 ```
 
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['nuxt-admin'],
+  modules: ['@alekorhonen/nuxt-admin'],
 })
 ```
 
@@ -46,7 +49,7 @@ Add your resources to `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ['nuxt-admin'],
+  modules: ['@alekorhonen/nuxt-admin'],
 
   admin: {
     resources: [

@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['nuxt-admin'],
+  modules: ['@alekorhonen/nuxt-admin'],
   devtools: { enabled: true },
   compatibilityDate: 'latest',
   admin: {
