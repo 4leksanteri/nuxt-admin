@@ -34,7 +34,7 @@ npm install nuxt-admin @nuxt/ui
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['nuxt-admin', '@nuxt/ui'],
+  modules: ['nuxt-admin'],
 })
 ```
 
@@ -46,17 +46,9 @@ Add your resources to `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ['nuxt-admin', '@nuxt/ui'],
+  modules: ['nuxt-admin'],
 
   admin: {
-    title: 'My Admin',
-    auth: {
-      check: async (event) => {
-        const session = await getSession(event)
-        return session?.user?.role === 'admin'
-      },
-      redirectTo: '/login',
-    },
     resources: [
       {
         name: 'users',
@@ -78,23 +70,7 @@ Then visit `/admin` — that's it.
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `title` | `string` | `'Admin'` | Admin panel title shown in sidebar and browser tab |
-| `auth` | `AdminAuth` | — | Auth configuration (see below) |
 | `resources` | `AdminResource[]` | `[]` | List of CRUD resources |
-
-### Auth
-
-```ts
-auth: {
-  check: async (event) => {
-    // event is the H3 event — access cookies, headers, session etc.
-    const session = await getSession(event)
-    return session?.user?.role === 'admin'
-  },
-  redirectTo: '/login', // where to redirect unauthorized users
-}
-```
-
-The `check` function runs **server-side only** on every `/admin` request. The client never sees your auth tokens or API endpoints.
 
 ---
 
